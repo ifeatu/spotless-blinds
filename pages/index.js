@@ -293,14 +293,11 @@ export default function Home() {
                   <div style={{color:"#7A8A7E",fontSize:14}}>We will be in touch within 24 hours.</div>
                 </div>
               ) : (
-                <form action="https://formsubmit.co/chimae.t@gmail.com" method="POST" style={{display:"flex",flexDirection:"column",gap:14}}>
-                  <input className="form-input" name="name" placeholder="Your name" required />
-                  <input className="form-input" name="email" placeholder="Email address" type="email" required />
-                  <input className="form-input" name="phone" placeholder="Phone number" type="tel" />
-                  <input type="hidden" name="_subject" value="New quote request from Spotless Blinds website" />
-                  <input type="hidden" name="_next" value="https://ifeatu.github.io/spotless-blinds/" />
-                  <input type="hidden" name="_captcha" value="false" />
-                  <textarea className="form-input" name="message" placeholder="Tell us about your home" rows={4} style={{resize:"vertical"}} />
+                <form onSubmit={(e) => { e.preventDefault(); const f = e.target; const name = f.name_field.value; const email = f.email_field.value; const phone = f.phone_field.value; const msg = f.message_field.value; const body = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0A%0A${msg}`; window.location.href = `mailto:chimae.t@gmail.com?subject=Quote Request from ${name}&body=${body}`; setSubmitted(true); setTimeout(() => setSubmitted(false), 4000); }} style={{display:"flex",flexDirection:"column",gap:14}}>
+                  <input className="form-input" name="name_field" placeholder="Your name" required />
+                  <input className="form-input" name="email_field" placeholder="Email address" type="email" required />
+                  <input className="form-input" name="phone_field" placeholder="Phone number" type="tel" />
+                  <textarea className="form-input" name="message_field" placeholder="Tell us about your home" rows={4} style={{resize:"vertical"}} />
                   <button type="submit" className="submit-btn">
                     Request Free Quote
                   </button>
