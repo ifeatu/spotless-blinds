@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 
-const LOGO_SRC = "/logo.png";
+const BASE = "/spotless-blinds";
+const LOGO_SRC = `${BASE}/logo.png`;
 
 const B = {
   navy: "#0F1923", dark: "#162029", slate: "#1E2A36", steel: "#2A3A48",
@@ -29,7 +30,7 @@ export default function Home() {
         <title>Spotless Blinds Co. | Premium Blind Cleaning - Bay Area</title>
         <meta name="description" content="Professional ultrasonic blind cleaning for homes in Marin, Walnut Creek, Tiburon and the SF Bay Area." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href={`${BASE}/favicon.png`} />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
 
