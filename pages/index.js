@@ -42,7 +42,7 @@ export default function Home() {
         .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 12px 20px; transition: all 0.3s ease; }
         .nav-scrolled { background: rgba(15,25,35,0.97); backdrop-filter: blur(12px); box-shadow: 0 2px 24px rgba(0,0,0,0.2); }
         .nav-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { height: 36px; width: auto; }
+        .nav-logo { height: 45px; width: auto; }
         .nav-links { display: flex; gap: 28px; align-items: center; }
         .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
         .nav-links a:hover { color: ${B.gold}; }
@@ -68,7 +68,7 @@ export default function Home() {
                       radial-gradient(ellipse at 70% 80%, rgba(116,198,157,0.04) 0%, transparent 50%);
           pointer-events: none; }
         .hero-inner { position: relative; z-index: 2; max-width: 800px; }
-        .hero-logo { height: 100px; width: auto; margin-bottom: 32px; filter: drop-shadow(0 4px 20px rgba(201,169,110,0.15)); }
+        .hero-logo { height: 125px; width: auto; margin-bottom: 32px; filter: drop-shadow(0 4px 20px rgba(201,169,110,0.15)); }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 600; color: white; line-height: 1.08; margin-bottom: 20px; }
         .hero h1 span { color: ${B.gold}; }
         .hero p { font-size: 18px; color: rgba(255,255,255,0.65); line-height: 1.6; max-width: 580px; margin: 0 auto 36px; font-weight: 300; }
@@ -78,7 +78,7 @@ export default function Home() {
 
         @media (max-width: 768px) {
           .hero { min-height: auto; padding: 120px 20px 60px; }
-          .hero-logo { height: 64px; margin-bottom: 24px; }
+          .hero-logo { height: 80px; margin-bottom: 24px; }
           .hero h1 { font-size: 36px; }
           .hero p { font-size: 16px; }
           .hero-cta { padding: 14px 28px; font-size: 15px; width: 100%; justify-content: center; }
@@ -149,7 +149,7 @@ export default function Home() {
         @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
 
         .footer { background: ${B.navy}; color: rgba(255,255,255,0.5); padding: 48px 20px; text-align: center; }
-        .footer-logo { height: 40px; margin-bottom: 12px; filter: drop-shadow(0 2px 12px rgba(201,169,110,0.1)); }
+        .footer-logo { height: 50px; margin-bottom: 12px; filter: drop-shadow(0 2px 12px rgba(201,169,110,0.1)); }
         .footer-tag { font-size: 13px; margin-bottom: 24px; color: rgba(255,255,255,0.35); }
         .footer-copy { font-size: 12px; color: rgba(255,255,255,0.25); }
       `}</style>
