@@ -293,11 +293,13 @@ export default function Home() {
                   <div style={{color:"#7A8A7E",fontSize:14}}>We will be in touch within 24 hours.</div>
                 </div>
               ) : (
-                <form action="https://formsubmit.co/chimae.t@gmail.com" method="POST" onSubmit={(e) => { e.preventDefault(); const f = e.target; fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } }).then(r => { if (r.ok) { setSubmitted(true); f.reset(); setTimeout(() => setSubmitted(false), 4000); } }); }} style={{display:"flex",flexDirection:"column",gap:14}}>
+                <form action="https://formsubmit.co/chimae.t@gmail.com" method="POST" style={{display:"flex",flexDirection:"column",gap:14}}>
                   <input className="form-input" name="name" placeholder="Your name" required />
                   <input className="form-input" name="email" placeholder="Email address" type="email" required />
                   <input className="form-input" name="phone" placeholder="Phone number" type="tel" />
                   <input type="hidden" name="_subject" value="New quote request from Spotless Blinds website" />
+                  <input type="hidden" name="_next" value="https://ifeatu.github.io/spotless-blinds/" />
+                  <input type="hidden" name="_captcha" value="false" />
                   <textarea className="form-input" name="message" placeholder="Tell us about your home" rows={4} style={{resize:"vertical"}} />
                   <button type="submit" className="submit-btn">
                     Request Free Quote
