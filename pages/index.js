@@ -281,7 +281,7 @@ export default function Home() {
               </p>
               <div style={{display:"flex",flexDirection:"column",gap:20}}>
                 <div><strong style={{color:B.navy}}>Phone</strong><br/><span style={{color:"#7A8A7E"}}>(510) 282-8901</span></div>
-                <div><strong style={{color:B.navy}}>Email</strong><br/><span style={{color:"#7A8A7E"}}>hello@spotlessblinds.co</span></div>
+                <div><strong style={{color:B.navy}}>Email</strong><br/><span style={{color:"#7A8A7E"}}>chimae.t@gmail.com</span></div>
                 <div><strong style={{color:B.navy}}>Hours</strong><br/><span style={{color:"#7A8A7E"}}>Mon - Sat, 8am - 6pm</span></div>
               </div>
             </div>
@@ -293,15 +293,16 @@ export default function Home() {
                   <div style={{color:"#7A8A7E",fontSize:14}}>We will be in touch within 24 hours.</div>
                 </div>
               ) : (
-                <div style={{display:"flex",flexDirection:"column",gap:14}}>
-                  <input className="form-input" placeholder="Your name" />
-                  <input className="form-input" placeholder="Email address" type="email" />
-                  <input className="form-input" placeholder="Phone number" type="tel" />
-                  <textarea className="form-input" placeholder="Tell us about your home" rows={4} style={{resize:"vertical"}} />
-                  <button className="submit-btn" onClick={(e) => { e.preventDefault(); setSubmitted(true); setTimeout(() => setSubmitted(false), 4000); }}>
+                <form action="https://formsubmit.co/chimae.t@gmail.com" method="POST" onSubmit={(e) => { e.preventDefault(); const f = e.target; fetch(f.action, { method: 'POST', body: new FormData(f), headers: { 'Accept': 'application/json' } }).then(r => { if (r.ok) { setSubmitted(true); f.reset(); setTimeout(() => setSubmitted(false), 4000); } }); }} style={{display:"flex",flexDirection:"column",gap:14}}>
+                  <input className="form-input" name="name" placeholder="Your name" required />
+                  <input className="form-input" name="email" placeholder="Email address" type="email" required />
+                  <input className="form-input" name="phone" placeholder="Phone number" type="tel" />
+                  <input type="hidden" name="_subject" value="New quote request from Spotless Blinds website" />
+                  <textarea className="form-input" name="message" placeholder="Tell us about your home" rows={4} style={{resize:"vertical"}} />
+                  <button type="submit" className="submit-btn">
                     Request Free Quote
                   </button>
-                </div>
+                </form>
               )}
             </div>
           </div>
