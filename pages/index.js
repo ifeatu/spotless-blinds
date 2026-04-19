@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 
-const BASE = "/spotless-blinds";
+const BASE = "";
 const LOGO_SRC = `${BASE}/logo.png`;
 
 const B = {
