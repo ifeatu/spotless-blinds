@@ -280,7 +280,7 @@ export default function Home() {
                 Tell us about your home and we will respond within 24 hours.
               </p>
               <div style={{display:"flex",flexDirection:"column",gap:20}}>
-                <div><strong style={{color:B.navy}}>Phone</strong><br/><span style={{color:"#7A8A7E"}}>(510) 282-8901</span></div>
+                <div><strong style={{color:B.navy}}>Phone</strong><br/><span style={{color:"#7A8A7E"}}>(510) 773-4505</span></div>
                 <div><strong style={{color:B.navy}}>Email</strong><br/><span style={{color:"#7A8A7E"}}>chimae.t@gmail.com</span></div>
                 <div><strong style={{color:B.navy}}>Hours</strong><br/><span style={{color:"#7A8A7E"}}>Mon - Sat, 8am - 6pm</span></div>
               </div>
@@ -293,7 +293,7 @@ export default function Home() {
                   <div style={{color:"#7A8A7E",fontSize:14}}>We will be in touch within 24 hours.</div>
                 </div>
               ) : (
-                <form onSubmit={async (e) => { e.preventDefault(); const f = e.target; try { const res = await fetch('https://formsubmit.co/ajax/chimae.t@gmail.com', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ name: f.name_field.value, email: f.email_field.value, phone: f.phone_field.value, message: f.message_field.value, _subject: 'Spotless Blinds - New Quote Request from ' + f.name_field.value, _template: 'table' }) }); if (res.ok) { setSubmitted(true); setTimeout(() => setSubmitted(false), 8000); f.reset(); } else { alert('Something went wrong. Please call us at (510) 282-8901.'); } } catch(err) { alert('Something went wrong. Please call us at (510) 282-8901.'); } }} style={{display:"flex",flexDirection:"column",gap:14}}>
+                <form onSubmit={async (e) => { e.preventDefault(); const f = e.target; try { const res = await fetch('https://formsubmit.co/ajax/chimae.t@gmail.com', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ name: f.name_field.value, email: f.email_field.value, phone: f.phone_field.value, message: f.message_field.value, _subject: 'Spotless Blinds - New Quote Request from ' + f.name_field.value, _template: 'table' }) }); if (res.ok) { setSubmitted(true); setTimeout(() => setSubmitted(false), 8000); f.reset(); } else { alert('Something went wrong. Please call us at (510) 773-4505.'); } } catch(err) { alert('Something went wrong. Please call us at (510) 773-4505.'); } }} style={{display:"flex",flexDirection:"column",gap:14}}>
                   <input className="form-input" name="name_field" placeholder="Your name" required />
                   <input className="form-input" name="email_field" placeholder="Email address" type="email" required />
                   <input className="form-input" name="phone_field" placeholder="Phone number" type="tel" />

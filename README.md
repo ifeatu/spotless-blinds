@@ -34,7 +34,7 @@ Located in `/docs`:
 ## Contact
 
 Chimae Tshimanga, Founder  
-(510) 282-8901  
+(510) 773-4505  
 hello@spotlessblinds.co
 
 ---
